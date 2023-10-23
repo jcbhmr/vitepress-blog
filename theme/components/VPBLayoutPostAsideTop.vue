@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useData, withBase } from 'vitepress'
-import { usePosts } from '../composables/usePosts'
-import type { VPBThemeConfig } from '..'
-import VPBPostAuthor from './VPBPostAuthor.vue'
-import VPBPostCategory from './VPBPostCategory.vue'
-import VPBTagIcon from './VPBTagIcon.vue'
+import { useData, withBase } from "vitepress";
+import { usePosts } from "../composables/usePosts";
+import type { VPBThemeConfig } from "..";
+import VPBPostAuthor from "./VPBPostAuthor.vue";
+import VPBPostCategory from "./VPBPostCategory.vue";
+import VPBTagIcon from "./VPBTagIcon.vue";
 
-const { site } = useData()
-const { post } = usePosts()
-const theme = site.value.themeConfig as VPBThemeConfig
-const path = withBase(theme.blog?.tagsPath ?? '/blog/tags')
+const { site } = useData();
+const { post } = usePosts();
+const theme = site.value.themeConfig as VPBThemeConfig;
+const path = withBase(theme.blog?.tagsPath ?? "/blog/tags");
 </script>
 
 <template>

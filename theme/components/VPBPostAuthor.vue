@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { withBase } from 'vitepress'
-import { usePosts } from '../composables/usePosts'
-import { useAuthors } from '../composables/useAuthors'
+import { computed } from "vue";
+import { withBase } from "vitepress";
+import { usePosts } from "../composables/usePosts";
+import { useAuthors } from "../composables/useAuthors";
 
 defineProps<{
-  insideDoc?: boolean
-}>()
+  insideDoc?: boolean;
+}>();
 
-const { findByName } = useAuthors()
-const { post } = usePosts()
+const { findByName } = useAuthors();
+const { post } = usePosts();
 
 const author = computed(() => {
-  return findByName(post.value.author)
-})
+  return findByName(post.value.author);
+});
 </script>
 
 <template>

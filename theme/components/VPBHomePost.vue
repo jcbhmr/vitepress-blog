@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { Post } from '../theme-types'
-import VPBPostCategory from './VPBPostCategory.vue'
-import VPBHomeAuthor from './VPBHomeAuthor.vue'
+import type { Post } from "../theme-types";
+import VPBPostCategory from "./VPBPostCategory.vue";
+import VPBHomeAuthor from "./VPBHomeAuthor.vue";
 
 defineProps<{
-  post: Post
-}>()
+  post: Post;
+}>();
 </script>
 
 <template>

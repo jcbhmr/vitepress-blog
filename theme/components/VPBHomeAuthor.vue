@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { useData, withBase } from 'vitepress'
-import { computed } from 'vue'
-import { useAuthors } from '../composables/useAuthors'
+import { useData, withBase } from "vitepress";
+import { computed } from "vue";
+import { useAuthors } from "../composables/useAuthors";
 
 const props = defineProps<{
-  name: string
-}>()
+  name: string;
+}>();
 
-const { site } = useData()
+const { site } = useData();
 
-const { findByName } = useAuthors()
+const { findByName } = useAuthors();
 const author = computed(() => {
-  return findByName(props.name)
-})
+  return findByName(props.name);
+});
 </script>
 
 <template>
