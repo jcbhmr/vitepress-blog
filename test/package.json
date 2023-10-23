@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vitepress": "^1.0.0-rc.23",
+    "vitepress-blog2": "file:..",
+    "vue": "^3.3.6"
+  }
+}

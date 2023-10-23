@@ -1,26 +1,31 @@
 {
-  "name": "vitepress-plugin-blog",
+  "name": "vitepress-blog2",
   "type": "module",
   "version": "1.0.0",
   "license": "MIT",
   "exports": {
     ".": "./index.js",
-    "./theme": "./theme/index.js"
+    "./theme": "./theme/index.ts"
   },
   "scripts": {
     "test": "npm run -w ./test build",
     "dev": "npm run -w ./test dev",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "lint": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^20.8.7",
     "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vitepress": "^1.0.0-rc.23",
+    "vue": "^3.3.6",
+    "vue-tsc": "^1.8.20"
+  },
+  "peerDependencies": {
     "vitepress": "^1.0.0-rc.23",
     "vue": "^3.3.6"
   },
   "workspaces": [
     "test"
-  ],
-  "dependencies": {
-  }
+  ]
 }
