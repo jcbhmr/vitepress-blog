@@ -1,5 +1,5 @@
 import { type SiteConfig, createContentLoader } from 'vitepress'
-import type { Author, VPBThemeConfig } from '..'
+import type { Author, VPBThemeConfig } from '../../src/theme'
 
 // @ts-expect-error globalThis is not typed
 const config = globalThis.VITEPRESS_CONFIG as SiteConfig<VPBThemeConfig>
