@@ -8,15 +8,13 @@
     "./theme": "./theme/index.js"
   },
   "scripts": {
-    "test": "npm run -w ./test dev",
-    "dev": "npm run -w ./test build",
+    "test": "npm run -w ./test build",
+    "dev": "npm run -w ./test dev",
     "format": "prettier -w ."
   },
   "devDependencies": {
     "@types/node": "^20.8.7",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
     "vitepress": "^1.0.0-rc.23",
     "vue": "^3.3.6"
   },
@@ -24,7 +22,5 @@
     "test"
   ],
   "dependencies": {
-    "callsites": "^4.1.0",
-    "get-caller-file": "^2.0.5"
   }
 }
