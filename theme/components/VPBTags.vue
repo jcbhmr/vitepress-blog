@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { inBrowser, useData, withBase } from 'vitepress'
-import { ref } from 'vue'
-import { useTags } from '../composables/useTags'
-import VPBTagIcon from './VPBTagIcon.vue'
+import { inBrowser, useData, withBase } from "vitepress";
+import { ref } from "vue";
+import { useTags } from "../composables/useTags";
+import VPBTagIcon from "./VPBTagIcon.vue";
 
-const { postsByTag } = useTags()
-const { theme } = useData()
-const selectedTag = ref('')
+const { postsByTag } = useTags();
+const { theme } = useData();
+const selectedTag = ref("");
 
 function toggleTag(tag: string) {
-  selectedTag.value = tag
+  selectedTag.value = tag;
 }
 if (inBrowser) {
-  const params = new URLSearchParams(window.location.search)
-  const init = params.get('init') // returns the number 123
+  const params = new URLSearchParams(window.location.search);
+  const init = params.get("init"); // returns the number 123
   if (init) {
-    toggleTag(init)
+    toggleTag(init);
   }
 }
 </script>

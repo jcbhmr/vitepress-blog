@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { usePosts } from '../composables/usePosts'
-import VPBPostCategory from './VPBPostCategory.vue'
-import VPBPostAuthor from './VPBPostAuthor.vue'
+import { usePosts } from "../composables/usePosts";
+import VPBPostCategory from "./VPBPostCategory.vue";
+import VPBPostAuthor from "./VPBPostAuthor.vue";
 
 defineProps<{
-  insideDoc?: boolean
-}>()
+  insideDoc?: boolean;
+}>();
 
-const { post } = usePosts()
+const { post } = usePosts();
 </script>
 
 <template>

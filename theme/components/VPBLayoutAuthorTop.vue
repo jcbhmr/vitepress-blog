@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
-import { useAuthors } from '../composables/useAuthors'
+import { withBase } from "vitepress";
+import { useAuthors } from "../composables/useAuthors";
 
-const { author, prevAuthor, nextAuthor } = useAuthors()
+const { author, prevAuthor, nextAuthor } = useAuthors();
 </script>
 
 <template>

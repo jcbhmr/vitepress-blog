@@ -13,6 +13,7 @@
     "format": "prettier -w ."
   },
   "devDependencies": {
+    "@types/node": "^20.8.7",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
@@ -23,6 +24,7 @@
     "test"
   ],
   "dependencies": {
+    "callsites": "^4.1.0",
     "get-caller-file": "^2.0.5"
   }
 }

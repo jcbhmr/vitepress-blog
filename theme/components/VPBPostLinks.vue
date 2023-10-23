@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useData, withBase } from 'vitepress'
-import { usePosts } from '../composables/usePosts'
-import type { VPBThemeConfig } from '..'
+import { useData, withBase } from "vitepress";
+import { usePosts } from "../composables/usePosts";
+import type { VPBThemeConfig } from "..";
 
 defineProps<{
-  insideDoc?: boolean
-}>()
+  insideDoc?: boolean;
+}>();
 
-const { site } = useData()
-const { nextPost, prevPost } = usePosts()
+const { site } = useData();
+const { nextPost, prevPost } = usePosts();
 
-const theme = site.value.themeConfig as VPBThemeConfig
-const path = withBase(theme.blog?.path ?? '/blog/')
+const theme = site.value.themeConfig as VPBThemeConfig;
+const path = withBase(theme.blog?.path ?? "/blog/");
 </script>
 
 <template>

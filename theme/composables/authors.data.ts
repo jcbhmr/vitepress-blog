@@ -1,14 +1,14 @@
-import { type SiteConfig, createContentLoader } from 'vitepress'
-import type { Author, VPBThemeConfig } from '../../src/theme'
+import { type SiteConfig, createContentLoader } from "vitepress";
+import type { Author, VPBThemeConfig } from "../../src/theme";
 
 // @ts-expect-error globalThis is not typed
-const config = globalThis.VITEPRESS_CONFIG as SiteConfig<VPBThemeConfig>
-const blogConfig = config.site.themeConfig.blog
+const config = globalThis.VITEPRESS_CONFIG as SiteConfig<VPBThemeConfig>;
+const blogConfig = config.site.themeConfig.blog;
 
-const pattern = `${blogConfig?.authorsPath ?? '/blog/authors'}/**/*.md`
+const pattern = `${blogConfig?.authorsPath ?? "/blog/authors"}/**/*.md`;
 
-const data = [] as Author[]
-export { data }
+const data = [] as Author[];
+export { data };
 
 export default createContentLoader(pattern, {
   excerpt: true,
@@ -22,6 +22,6 @@ export default createContentLoader(pattern, {
         url,
         excerpt,
       }))
-      .sort((a, b) => a.name.localeCompare(b.name))
+      .sort((a, b) => a.name.localeCompare(b.name));
   },
-})
+});

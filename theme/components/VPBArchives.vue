@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useData, withBase } from 'vitepress'
-import { useArchives } from '../composables/useArchives'
+import { useData, withBase } from "vitepress";
+import { useArchives } from "../composables/useArchives";
 
-const { postsByYear } = useArchives()
-const { theme } = useData()
+const { postsByYear } = useArchives();
+const { theme } = useData();
 </script>
 
 <template>
@@ -25,7 +25,7 @@ const { theme } = useData()
       <div
         class="px-0 pb-2 pt-4 text-xl font-semibold leading-6 text-[color:var(--vp-c-brand-light)] dark:text-[color:var(--vp-c-brand-dark)]"
       >
-        {{ year[0].date.raw.split('-')[0] }}
+        {{ year[0].date.raw.split("-")[0] }}
       </div>
       <a
         v-for="(post, index) in year"
