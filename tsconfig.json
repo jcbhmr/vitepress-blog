@@ -10,5 +10,12 @@
         "allowImportingTsExtensions": true,
         "isolatedModules": true,
         "strict": false,
-    }
+    },
+    // https://github.com/microsoft/TypeScript/issues/49555
+    "include": [
+        "**/*",
+        "**/.*",
+        "**/.*/**/*",
+        "**/.*/**/.*"],
+    "exclude": ["**/node_modules"]
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import VPBHomePost from './VPBHomePost.vue'
-import usePosts from '../composables/usePosts.ts'
+import VPB2HomePost from './VPB2HomePost.vue'
+import usePosts from './usePosts.ts'
 const { theme,page } = useData()
 const {posts} = usePosts()
 </script>
@@ -11,17 +11,17 @@ const {posts} = usePosts()
       <h2
         class="mb-4 text-3xl font-extrabold tracking-tight text-[color:var(--vp-c-brand-light)] dark:text-[color:var(--vp-c-brand-dark)] lg:text-4xl"
       >
-        {{ theme.blog2?.title }}
+        {{ theme.blog2?.title || "My blog" }}
       </h2>
       <p
         class="font-light text-[color:var(--vp-c-text-light-1)] dark:text-[color:var(--vp-c-text-dark-1)] sm:text-xl"
       >
-        {{ theme.blog2?.description }}
+        {{ theme.blog2?.description || "An awesome blog" }}
       </p>
     </div>
     <div class="grid gap-6 p-2 lg:grid-cols-2">
       <div v-for="post of posts" :key="post.url">
-        <VPBHomePost :post="post" />
+        <VPB2HomePost :post="post" />
       </div>
     </div>
   </div>

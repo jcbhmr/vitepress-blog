@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from "vue";
 import type { Theme } from "vitepress";
-import VPB2Home from "./components/VPB2Home.vue"
+import VPB2Home from "./VPB2Home.vue"
 // import './style.css'
 
 export default function Blog2Theme(ParentTheme: Theme) {
