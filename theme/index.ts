@@ -7,15 +7,15 @@ import VPB2Home from "./components/VPB2Home.vue"
 export default function Blog2Theme(ParentTheme: Theme) {
   return {
     extends: ParentTheme,
-    Layout: () => {
-      return h(ParentTheme.Layout!, null, {
+    Layout: (props, { slots }) => {
+      return h(ParentTheme.Layout!, props, {
         // https://vitepress.dev/guide/extending-default-theme#layout-slots
+        ...slots,
       });
     },
     enhanceApp({ app, router, siteData }) {
       // ...
       app.component("vpb2-home", VPB2Home)
-      console.debug(VPB2Home, "registered")
     },
   } satisfies Theme;
 }

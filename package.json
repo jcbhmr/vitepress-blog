@@ -27,5 +27,8 @@
   },
   "workspaces": [
     "test"
-  ]
+  ],
+  "dependencies": {
+    "glob": "^10.3.10"
+  }
 }
